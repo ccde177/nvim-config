@@ -31,9 +31,14 @@ return require("packer").startup(function()
     --lsp related stuff
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
+    --completion
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
     --Rust related stuff
+    use 'rust-lang/rust.vim'
     --use 'simrat39/rust-tools.nvim'
     --vsnip
     use 'hrsh7th/cmp-vsnip'
@@ -46,5 +51,12 @@ return require("packer").startup(function()
             require'alpha'.setup(require'alpha.themes.startify'.config)
         end
     }
+    --Terminal
+    use {"akinsho/toggleterm.nvim", tag = 'v1.*', config = function()
+        require("toggleterm").setup()
+    end}
+    --use 'navarasu/onedark.nvim'
+    --Auto-closing brackets and etc
+    use 'jiangmiao/auto-pairs'
 end)
 

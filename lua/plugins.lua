@@ -58,5 +58,15 @@ return require("packer").startup(function()
     --use 'navarasu/onedark.nvim'
     --Auto-closing brackets and etc
     use 'jiangmiao/auto-pairs'
+    --Cokeline tabs
+    use ({
+        'noib3/nvim-cokeline',
+        requires = 'kyazdani42/nvim-web-devicons',
+        config = function () 
+            require('cokeline').setup()
+        end
+    })
+    --Colorizer 
+    use  'norcalli/nvim-colorizer.lua'
 end)
 

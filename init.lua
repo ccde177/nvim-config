@@ -9,6 +9,8 @@ require('config/plugins.nvim-treesitter')
 require('config/plugins.nvimtree')
 require('config/plugins.telescope')
 require('config/plugins.nvim-cmp')
+require('config/plugins.cokeline')
+require('config/plugins.colorizer')
 
 require('config/lsp')
 
